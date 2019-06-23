@@ -21,3 +21,7 @@ Klasa Client jest prostą klasą, która z utworzonego portu UDP wysyła na poda
 **Obserwacje, eksperymenty, wnioski i założenia:**
 
 W trakcie pracy nad projektem spostrzegłem, że pakiety wysyłane przez klienta potrafią przychodzić szybciej, niż serwer jest w stanie wypisywać do standardowego wyjścia informacje, że owy pakiet dotarł do portu. Może również wystąpić sytuacja, że pakiety dotrą do portów w innej kolejności, niż zostały wysłane. Prawdopodobnie spowodowane jest to implementacją metody port knocking przez rozdzielenie portów UDP na wątki. Na potrzeby projektu opóźniłem wysyłanie pakietów o 100ms. Jest to bezpieczne, górne ograniczenie, które ma pozwolić na poprawne działanie programu na różnych (szybszych lub wolniejszych) komputerach i połączeniach.
+
+---
+
+[Kod zaprojektowany i napisany przez Pawła Saniewskiego](https://www.linkedin.com/in/pawelsaniewski/)
